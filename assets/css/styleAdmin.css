@@ -12,6 +12,16 @@ body {
     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     background-size: cover;
 }
+a{
+    color: black !important;
+}
+img{
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: contain;
+    
+}
 nav.navbar.navbar-expand-lg.bg-light {
     position: fixed;
     top: 0;
@@ -41,4 +51,10 @@ button#btnThemSP {
 }
 .modal-body {
     text-align: start;
+}
+th.desc {
+    width: 200px;
+}
+button.btn.btn-danger {
+    margin-bottom: 5px;
 }

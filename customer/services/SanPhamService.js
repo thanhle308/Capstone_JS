@@ -43,5 +43,12 @@ function SanPhamService() {
             url: `https://636a2049c07d8f936d93d252.mockapi.io/Products/${id}`
         });
     }
+    this.capNhatSP = function (id, newData) {
+        return axios({
+            method: 'put',
+            url: `https://636a2049c07d8f936d93d252.mockapi.io/Products/${id}`,
+            data: newData
+        });
+    }
 
 }
