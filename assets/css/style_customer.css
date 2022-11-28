@@ -312,3 +312,19 @@ select.form-select {
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and  (max-width :600px ){
+
+.gia1,.hinh1,.hinh,.gia{
+    display: none;
+}
+a.btn.btn-danger.btn-sm {
+    padding: 5px;
+}  
+}
+
+@media only screen and  (max-width :991px ){
+   
+
+}
+

@@ -89,12 +89,12 @@ function renderCart() {
     sum = sum + sp.quantity * sp.product.price;
     content += `
     <tr>
-      <td class="w-25">
+      <td class="w-25 hinh1">
         <img src="${sp.product.img}"
           class="img-fluid img-thumbnail" alt="Sheep">
       </td>
       <td>${sp.product.name}</td>
-      <td>${sp.product.price}</td>
+      <td class="gia1">${sp.product.price}</td>
       <td class="qty"> <div class="icon"><i class="fa-sharp fa-solid fa-minus" onclick="minusProduct(${index})"> </i> ${sp.quantity} <i class="fa-solid fa-plus" onclick="addToCart(${sp.product.id})"></i></div></td>
       <td>${sp.total}</td>
       <td>
@@ -105,7 +105,7 @@ function renderCart() {
     </tr>`
   });
   document.querySelector("#bodycart").innerHTML = content;
-  document.querySelector("#sumcart").innerHTML = sum;
+  document.querySelector("#sumcart").innerHTML = sum+"$";
 }
 
 function addToCart(id) {
