@@ -43,6 +43,14 @@ function hienThiTable(mangSP) {
     document.querySelector("#tblDanhSachSP").innerHTML = content;
 }
 document.querySelector("#btnThemSP").onclick = function () {
+    //reset form
+    document.querySelector("#namesp").value = "";
+    document.querySelector("#pricesp").value = "";
+    document.querySelector("#screensp").value = "";
+    document.querySelector("#bcsp").value = "";
+    document.querySelector("#fcsp").value = "";
+    document.querySelector("#imgsp").value = "";
+    document.querySelector("#descsp").value = "";
     document.querySelector("#myModal .modal-footer").innerHTML = `<button class="btn btn-success" onclick="themSanPham()"  >Add Product</button>`
 }
 function themSanPham() {
@@ -119,7 +127,7 @@ function xemCT(id) {
             console.log(error)
         })
 }
-function capNhatSanPham(id){
+function capNhatSanPham(id) {
     //lấy data mới của sp
     var name = document.querySelector("#namesp").value;
     var price = document.querySelector("#pricesp").value;
@@ -130,16 +138,16 @@ function capNhatSanPham(id){
     var desc = document.querySelector("#descsp").value;
     var type = document.querySelector("#typesp").value;
 
-    var newData = new SanPham(name,price,screen,backCamera,frontCamera,img,desc,type);
+    var newData = new SanPham(name, price, screen, backCamera, frontCamera, img, desc, type);
 
-    spAdmin.capNhatSP(id,newData)
-    .then(function(result){
-        getProducts();
-        document.querySelector("#myModal .close").click();
+    spAdmin.capNhatSP(id, newData)
+        .then(function (result) {
+            getProducts();
+            document.querySelector("#myModal .close").click();
 
-    })
-    .catch(function(error){
-        console.log(error)
-    })
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
 
 }
